@@ -1,0 +1,221 @@
+\documentclass[a4paper, 12pt, oneside]{report} % for final draft compilation
+% \documentclass[a4paper, 12pt, oneside, draft]{report} % for draft compilation
+
+% Preamble:
+\usepackage[T1]{fontenc}                                 % package for specifying output font encoding
+% \usepackage[font=footnotesize,format=hang]{caption}      % package for formatting figure caption
+\usepackage[hidelinks, colorlinks]{hyperref}             % package for hyperlinking references - hidelinks option removes the ugly boxes around the hyperlinks
+\usepackage[md]{titlesec}                                % package for tweaking the chapter/section/subsection titles format
+\usepackage[utf8]{inputenc}                              % package for specifying input font encoding
+\usepackage{chngcntr}                                    % package for making continuous figure numbering, instead of section-based numbering
+\usepackage{graphicx}                                    % package for graphics handling (i.e. figure images)
+\usepackage{mathptmx}                                    % package for Times New Roman font
+\usepackage{natbib}                                      % package for reference management
+\usepackage{setspace}                                    % package for setting line space (used in title page)
+\usepackage{booktabs}                                    % package for better looking tables
+\usepackage{etoolbox}                                    % package to 'robustify' \bfseries
+
+% Set up the hyperlinks - change the colour of the links to blue:
+% \hypersetup{allcolors=blue}
+\hypersetup{allcolors=black} % uncomment this line to make the hyperlinks black
+
+% Change the default url font:
+\urlstyle{rm}
+
+% Change the title of Table of Contents:
+\renewcommand{\contentsname}{Table of Contents}
+
+% Italicise the subsubsection title:
+\titleformat{\subsubsection}{\normalfont\itshape\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}{\normalfont\itshape}{\theparagraph}{\noindent}{}
+
+% Specify graphics path:
+\graphicspath{{./images/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+% Remove chapter header:
+\titleformat{\chapter}[display] {\normalfont}{}{0pt}{\Huge}
+\titleformat{\section}[display] {\normalfont}{}{0pt}{\Large}
+
+\begin{document}
+
+\begin{titlepage}
+
+\centering
+
+\null
+
+\vfill
+
+\rule[2.0mm]{\textwidth}{0.5mm}
+
+\begin{doublespace}
+    {\Huge \scshape Digital Lab Notebook with Git/GitHub and Markdown}
+\end{doublespace}
+
+\rule[2.0mm]{\textwidth}{0.5mm}
+
+{\large \scshape Instructor's Notes}
+
+\vfill
+
+\end{titlepage}
+
+\pagenumbering{roman} % change the page numbering to roman numeral
+
+% Set line spacing to double space:
+\onehalfspacing
+
+\addcontentsline{toc}{section}{\contentsname}
+
+\tableofcontents
+
+\clearpage
+
+% Need to set line spacing to single space, otherwise it inserts a blank page for an unknown reason:
+\singlespacing
+
+\clearpage
+
+% Reset the spacing to 1.5:
+\onehalfspacing
+
+\pagenumbering{arabic} % revert the page numbering to normal numbering
+
+% Begin main text from here:
+
+\chapter{Introduction\\($\sim$40min)}
+\label{cha:introduction}
+
+\section{What is git?}
+\label{sec:what_is_git}
+
+{\bfseries Duration: 15min}
+
+\begin{itemize}
+	\item Start with examples of keeping track of changes of a document (e.g.\ thesis/paper)
+		\begin{itemize}
+			\item MS Word keeps record of changes of the {\bfseries current} document -- when you close and re-open the document, you lose all of the changes you made previously
+			\item To avoid the situation as above, people usually make a copy before they start editing, and then (eventually) compare the new version with the old one (which is a hassle)
+		\end{itemize}
+	\item Example FAQ: ``Can you reproduce your results?'' (were your methods/protocols well documented?)
+	\item Example FAQ: ``What protocol(s) did you use for that experiment?'' (when you have multiple trial/error attempts)
+	\item Make absolutely clear the objective(s) of using a version control system
+		\begin{itemize}
+			\item To keep track of and maintain the most current version of your document
+			\item Keep a long-living history of your document/protocols
+			\item Share documents with others for collaboration
+			\item `Back-up' of your codes
+		\end{itemize}
+\end{itemize}
+
+(Make a diagram somewhere)
+
+
+\section{Creating GitHub}
+\label{sec:creating_github}
+
+{\bfseries Duration: 10min}
+
+\begin{itemize}
+	\item Create a GitHub account
+	\item Explain what GitHub is
+		\begin{itemize}
+			\item A ``remote'' server for your git repository
+			\item Essentially an online storage space for the documents that you want to version control
+		\end{itemize}
+	\item Create a DLN repository to work with during the course
+	\item Explain what a repository is
+\end{itemize}
+
+
+\section{Markdown files}
+\label{sec:markdown_files}
+
+{\bfseries Duration: 15min}
+
+\begin{itemize}
+	\item Edit README.md
+	\item Explain and show what a Markdown document is
+	\item Introduce some Markdown syntax
+		\begin{itemize}
+			\item Headers
+			\item Text decorations (bold, italics, underline, etc.)
+			\item Web Links
+			\item Adding images
+			\item Footnotes
+			\item Tables
+		\end{itemize}
+\end{itemize}
+
+\noindent
+Play around with Markdown syntax using the README file (saving changes and committing comes in the next chapter/section).
+
+
+\chapter{Making Digital Lab Notebook\\($\sim$50min)}
+\label{cha:making_digital_lab_notebook}
+
+\section{Change, add, and commit}
+\label{sec:change_add_and_commit}
+
+{\bfseries Duration: 20min}
+
+\begin{itemize}
+	\item Save changes and commit the README.md
+\end{itemize}
+
+
+
+\section{Creating new entries}
+\label{sec:creating_new_entries}
+
+{\bfseries Duration: 15min}
+
+
+
+
+\section{Linking entries}
+\label{sec:linking_entries}
+
+{\bfseries Duration: 15min}
+
+
+
+
+
+\chapter{Working Collaboratively and Locally\\($\sim$50min)}
+\label{cha:working_collaboratively_and_locally}
+
+\section{Sharing your repository}
+\label{sec:sharing_your_repository}
+
+{\bfseries Duration: 15min}
+
+
+
+
+\section{Why use git on local machine?}
+\label{sec:why_use_git_on_local_machine}
+
+{\bfseries Duration: 15min}
+
+
+
+
+
+
+\section{Setting up git on your local machine}
+\label{sec:setting_up_git_on_your_local_machine}
+
+{\bfseries Duration: 20min}
+
+
+
+
+
+
+
+
+
+
+\end{document}
