@@ -25,7 +25,7 @@ For a detailed description of the course content, see [course outline](course_ou
 TODO
 
 
-================================================================================
+------------------------------------
 
 ## For Teachers of this Course
 
