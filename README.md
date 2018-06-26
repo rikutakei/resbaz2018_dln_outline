@@ -20,6 +20,12 @@ The above objectives/topics will be covered in the duration of the course (2.5 h
 
 For a detailed description of the course content, see [course outline](course_outline.md).
 
+## Setup instructions
+
+TODO
+
+
+================================================================================
 
 ## For Teachers of this Course
 
@@ -31,5 +37,6 @@ In the future, I may create a markdown version.
 
 ## TODO
 
+* Add setup instructions
 * Create a markdown version for people who want to just read it in the browser
 
