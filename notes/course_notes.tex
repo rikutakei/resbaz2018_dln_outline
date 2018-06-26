@@ -93,6 +93,7 @@
 {\bfseries Duration: 15min}
 
 \begin{itemize}
+	\item Before you begin, make sure everyone has git installed in their local machine (for later use)
 	\item Start with examples of keeping track of changes of a document (e.g.\ thesis/paper)
 		\begin{itemize}
 			\item MS Word keeps record of changes of the {\bfseries current} document -- when you close and re-open the document, you lose all of the changes you made previously
@@ -167,9 +168,12 @@ Play around with Markdown syntax using the README file (saving changes and commi
 	\item Explain what the git commit ID/hash are
 	\item Add/remove more stuff to the README file and commit changes
 	\item Note the diff of the documents when making changes
-	\item Demonstrate how to revert documents to previous version
+	\item Note that, althought you can ``checkout'' previous commits, you can't ``revert'' the repo to that particular commit on GitHub
+		\begin{itemize}
+			\item Reverting to different commit will be covered in command line git
+		\end{itemize}
+	\item Keep adding changes to the README and demonstrate how git/GitHub is keeping track of all the file changes
 \end{itemize}
-
 
 
 \section{Creating new entries}
@@ -177,7 +181,14 @@ Play around with Markdown syntax using the README file (saving changes and commi
 
 {\bfseries Duration: 15min}
 
-
+\begin{itemize}
+	\item Start creating new entries to the repo
+		\begin{itemize}
+			\item Make a new directory in the repo for your entries (e.g.\ protocols, notes, results)
+		\end{itemize}
+	\item Add an entry to the directories as before and commit
+	\item Keep showing what the commits look like through the commit history
+\end{itemize}
 
 
 \section{Linking entries}
@@ -185,8 +196,18 @@ Play around with Markdown syntax using the README file (saving changes and commi
 
 {\bfseries Duration: 15min}
 
-
-
+\begin{itemize}
+	\item Start creating links to your new entries in README
+		\begin{itemize}
+			\item Explain directory structure when creating links to new entries
+		\end{itemize}
+	\item Point out the power of doing this
+		\begin{itemize}
+			\item README as the content viewer/navigator
+			\item Individual entries organised in directories
+			\item Everything version controlled with git
+		\end{itemize}
+\end{itemize}
 
 
 \chapter{Working Collaboratively and Locally\\($\sim$50min)}
@@ -197,6 +218,12 @@ Play around with Markdown syntax using the README file (saving changes and commi
 
 {\bfseries Duration: 15min}
 
+\begin{itemize}
+	\item Just send your collaborator the URL to your repository
+	\item Demonstrate how to give editing access to others for collaboration
+	\item Let everyone play around with editing other people's repository and sending pull requests
+	\item Introduce the idea of merge conflicts and let them try it out
+\end{itemize}
 
 
 
@@ -205,9 +232,14 @@ Play around with Markdown syntax using the README file (saving changes and commi
 
 {\bfseries Duration: 15min}
 
-
-
-
+\begin{itemize}
+	\item Able to checkout, but can't revert to a particular commit on GitHub
+	\item For bulk adds/commits (edit locally, and then push commits)
+	\item You can't have a ``working draft'' when you are editing it on GitHub -- whatever change you make to the document, you have to commit it after each edit
+		\begin{itemize}
+			\item You can, but you will have to create a new branch for that (which could be a hassle to keep track of)
+		\end{itemize}
+\end{itemize}
 
 
 \section{Setting up git on your local machine}
@@ -215,13 +247,12 @@ Play around with Markdown syntax using the README file (saving changes and commi
 
 {\bfseries Duration: 20min}
 
-
-
-
-
-
-
-
+\begin{itemize}
+	\item Follow first half of the SWC git lesson for git setup
+	\item Clone the already created repository from GitHub
+	\item Repeat similar process as what we did on GitHub (add changes, commit, log, revert, push)
+	\item Explain new ideas (i.e.\ add, revert, pull, and push)
+\end{itemize}
 
 
 \end{document}
