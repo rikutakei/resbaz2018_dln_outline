@@ -10,27 +10,21 @@ Please note that the idea/implementation of DLN using Git/GitHub and markdown co
 ## What this course covers
 
 This course will cover the following:
-1. Creating a GitHub account and a repo
+1. Creating a GitHub account and a repository
 1. Process of Version Control with Git/GitHub
 1. Markdown syntax
 1. Making a functional DLN
-1. Local Version Control using command line and Git
 
 The above objectives/topics will be covered in the duration of the course (2.5 hours).
 
 For a detailed description of the course content, see [course outline](course_outline.md).
 
-## Setup instructions
-
-TODO
-
-
 ------------------------------------
 
 ## For Teachers of this Course
 
-The course notes live in the directory [notes/](notes) in PDF, using LaTeX.
-I've decided to create the notes in LaTeX, because it's cleaner and you can print the PDF (rather than flicking back-and-forth between windows on your screen).
+The course notes live in the [notes](notes) directory in PDF.
+I've decided to create the notes in PDF, because it's cleaner and you can print it out (rather than flicking back-and-forth between windows on your screen).
 
 In the future, I may create a markdown version.
 
