@@ -18,6 +18,8 @@ Topics covered:
 1. Creating new lab entries
 1. Linking lab entries
 
+# Break
+
 ## Working Collaboratively and Locally
 
 **Duration: ~40min**
