@@ -84,24 +84,26 @@
 
 % Begin main text from here:
 
-\chapter{Introduction\\($\sim$40min)}
+\chapter{Introduction\\($\sim$60min)}
 \label{cha:introduction}
 
-\section{What is git?}
+\section{What is Digital Lab Notebook?}
 \label{sec:what_is_git}
 
-{\bfseries Duration: 15min}
+{\bfseries Duration: 20min}
+
+\subsection*{Key points to cover:}
 
 \begin{itemize}
-	\item Before you begin, make sure everyone has git installed in their local machine (for later use)
-	\item Start with examples of keeping track of changes of a document (e.g.\ thesis/paper)
+	\item Start off with quick powerpoint slides to kick off the workshop
+	\item Slide 3 -- show some bad examples of keeping track of changes of a document (e.g.\ thesis/paper)
 		\begin{itemize}
 			\item MS Word keeps record of changes of the {\bfseries current} document -- when you close and re-open the document, you lose all of the changes you made previously
 			\item To avoid the situation as above, people usually make a copy before they start editing, and then (eventually) compare the new version with the old one (which is a hassle)
 		\end{itemize}
 	\item Example FAQ: ``Can you reproduce your results?'' (were your methods/protocols well documented?)
 	\item Example FAQ: ``What protocol(s) did you use for that experiment?'' (when you have multiple trial/error attempts)
-	\item Make absolutely clear the objective(s) of using a version control system
+	\item Make absolutely clear the objective(s) of using a version control system/GitHub
 		\begin{itemize}
 			\item To keep track of and maintain the most current version of your document
 			\item Keep a long-living history of your document/protocols
@@ -110,13 +112,13 @@
 		\end{itemize}
 \end{itemize}
 
-(Make a diagram somewhere)
 
-
-\section{Creating GitHub}
+\section{Creating a GitHub account and repository}
 \label{sec:creating_github}
 
-{\bfseries Duration: 10min}
+{\bfseries Duration: 15min}
+
+\subsection*{Key points to cover:}
 
 \begin{itemize}
 	\item Create a GitHub account
@@ -127,50 +129,76 @@
 		\end{itemize}
 	\item Create a DLN repository to work with during the course
 	\item Explain what a repository is
+		\begin{itemize}
+			\item Just a fancy name for a directory/folder
+			\item This is where all your documents, etc.\ lives
+		\end{itemize}
+	\item Point out the existence of README in the repository you just created
+		\begin{itemize}
+			\item Show that it's a Markdown file (with a `\texttt{.md}' extension)
+			\item Also note that the README file is ``\textit{linked}'' to the repository description content (i.e.\ the contents are reflected in the description of the repository)
+		\end{itemize}
 \end{itemize}
 
 
 \section{Markdown files}
-\label{sec:markdown_files}
+\label{sec:Markdown_files}
 
-{\bfseries Duration: 15min}
+{\bfseries Duration: 25min}
+
+\subsection*{Key points to cover:}
 
 \begin{itemize}
 	\item Edit README.md
 	\item Explain and show what a Markdown document is
+	\item Show how to preview the Markdown document on GitHub
 	\item Introduce some Markdown syntax
 		\begin{itemize}
 			\item Headers
 			\item Text decorations (bold, italics, underline, etc.)
+			\item Bullet points, enumerate lists, and task lists
 			\item Web Links
 			\item Adding images
-			\item Footnotes
 			\item Tables
+			\item (Footnotes) -- this is only in pure Markdown, and not in GitHub Markdown
 		\end{itemize}
+	\item Play around with (and also take time explaining) Markdown syntax using the README file
 \end{itemize}
 
-\noindent
-Play around with Markdown syntax using the README file (saving changes and committing comes in the next chapter/section).
 
-
-\chapter{Making Digital Lab Notebook\\($\sim$50min)}
+\chapter{Making Digital Lab Notebook\\($\sim$30min)}
 \label{cha:making_digital_lab_notebook}
 
 \section{Change, add, and commit}
 \label{sec:change_add_and_commit}
 
-{\bfseries Duration: 20min}
+{\bfseries Duration: 15min}
+
+\singlespacing
+\subsection*{Git commands/concepts to cover:}
 
 \begin{itemize}
-	\item Save changes and commit the README.md
+	\item add/commit
+	\item log
+	\item checkout
+	\item diff
+	\item (clone)
+\end{itemize}
+
+\onehalfspacing
+
+\subsection*{Key points to cover:}
+
+\begin{itemize}
+	\item Save changes and \texttt{commit} the README.md
 	\item Explain what committing means
 	\item Show what the logs/commit history look like
-	\item Explain what the git commit ID/hash are
+	\item Explain what the git commit IDs/hashes are
 	\item Add/remove more stuff to the README file and commit changes
-	\item Note the diff of the documents when making changes
-	\item Note that, althought you can ``checkout'' previous commits, you can't ``revert'' the repo to that particular commit on GitHub
+	\item Note the \texttt{diff} of the documents when making changes
+	\item Note that, althought you can \texttt{checkout} previous commits, you can't \texttt{revert} the repo to that particular commit on GitHub
 		\begin{itemize}
-			\item Reverting to different commit will be covered in command line git
+			\item Reverting to a different commit can only be done on command line git (beyond the scope of the course)
 		\end{itemize}
 	\item Keep adding changes to the README and demonstrate how git/GitHub is keeping track of all the file changes
 \end{itemize}
@@ -179,79 +207,121 @@ Play around with Markdown syntax using the README file (saving changes and commi
 \section{Creating new entries}
 \label{sec:creating_new_entries}
 
-{\bfseries Duration: 15min}
+{\bfseries Duration: 10min}
+
+\subsection*{Key points to cover:}
 
 \begin{itemize}
 	\item Start creating new entries to the repo
 		\begin{itemize}
-			\item Make a new directory in the repo for your entries (e.g.\ protocols, notes, results)
+			\item Make a new directory in the repo for your entries (e.g.\ protocols, notes, results, images)
+			\item Note that you need to create a file with full path in order to create a directory within a repo, using GitHub (if it was command line, then you can just \texttt{mkdir} it)
 		\end{itemize}
-	\item Add an entry to the directories as before and commit
+	\item Add an entry to the directories as before and commit (this would be combined with the above command)
 	\item Keep showing what the commits look like through the commit history
+	\item Demonstrate how each Markdown files can be drafted to suit individual's needs (whatever categories/sub-categories)
 \end{itemize}
 
 
 \section{Linking entries}
 \label{sec:linking_entries}
 
-{\bfseries Duration: 15min}
+{\bfseries Duration: 5min}
+
+\subsection*{Key points to cover:}
 
 \begin{itemize}
-	\item Start creating links to your new entries in README
+	\item Start creating links to your newly created entries in README
 		\begin{itemize}
 			\item Explain directory structure when creating links to new entries
 		\end{itemize}
 	\item Point out the power of doing this
 		\begin{itemize}
-			\item README as the content viewer/navigator
-			\item Individual entries organised in directories
-			\item Everything version controlled with git
+			\item README as the content viewer/navigator of your repository
+			\item Individual entries organised in directories and sub-directories
+			\item Everything version controlled with git/GitHub
 		\end{itemize}
 \end{itemize}
 
 
-\chapter{Working Collaboratively and Locally\\($\sim$50min)}
+\chapter{Working Collaboratively and Locally\\($\sim$40min)}
 \label{cha:working_collaboratively_and_locally}
 
 \section{Sharing your repository}
 \label{sec:sharing_your_repository}
 
-{\bfseries Duration: 15min}
+{\bfseries Duration: 5min}
+
+\subsection*{Key points to cover:}
 
 \begin{itemize}
-	\item Just send your collaborator the URL to your repository
+	\item Just send your collaborator the URL to your repository, if they only want to read what you have been doing (and no editing required)
 	\item Demonstrate how to give editing access to others for collaboration
-	\item Let everyone play around with editing other people's repository and sending pull requests
-	\item Introduce the idea of merge conflicts and let them try it out
+		\begin{itemize}
+			\item Through settings? \textbf{(TODO: check before workshop)}
+		\end{itemize}
+	\item Also at this point, I should point out how to obtain the ``hard copy'' of the repository/documents
+		\begin{itemize}
+			\item Idea of \texttt{git clone}
+			\item ``Download as zip'' button
+		\end{itemize}
+	\item Note that the above point shouldn't really be necessary because everything is on GitHub as Markdown
 \end{itemize}
 
 
+\section{Pull requests and merging}
+\label{sec:pull_requests_and_merging}
 
-\section{Why use git on local machine?}
-\label{sec:why_use_git_on_local_machine}
 
 {\bfseries Duration: 15min}
 
+\subsection*{Key points to cover:}
+
 \begin{itemize}
-	\item Able to checkout, but can't revert to a particular commit on GitHub
-	\item For bulk adds/commits (edit locally, and then push commits)
-	\item You can't have a ``working draft'' when you are editing it on GitHub -- whatever change you make to the document, you have to commit it after each edit
+	\item Let everyone play around with editing other people's repository and sending pull requests
 		\begin{itemize}
-			\item You can, but you will have to create a new branch for that (which could be a hassle to keep track of)
+			\item Let others edit your's, and you edit other people's repo
+		\end{itemize}
+	\item Introduce the idea of merge conflicts
+		\begin{itemize}
+			\item When someone add/changes your document, but you have already made your own changes to the document
+			\item Git doesn't know what to do (i.e.\ which changes are the ``correct'' one), so you have to decide which change(s) to keep in the document
+			\item (TODO: check if merge conflicts appear on GitHub, or it has a nicer way of solving conflicts)
 		\end{itemize}
 \end{itemize}
 
 
-\section{Setting up git on your local machine}
-\label{sec:setting_up_git_on_your_local_machine}
+\section{Looking back in time}
+\label{sec:looking_back_in_time}
 
-{\bfseries Duration: 20min}
+{\bfseries Duration: 10min}\\
+
+\noindent
+Note that this section covers some concepts beyond the scope of the course content, as it requires command line git to achieve what we want to do.
+If participants are interested, point them towards the Software Carpentry's introductory git course.
+
+\subsection*{Key points to cover:}
 
 \begin{itemize}
-	\item Follow first half of the SWC git lesson for git setup
-	\item Clone the already created repository from GitHub
-	\item Repeat similar process as what we did on GitHub (add changes, commit, log, revert, push)
-	\item Explain new ideas (i.e.\ add, revert, pull, and push)
+	\item Show them how to revert repository to previous state \textbf{IF} the current state resulted from a pull request or a merging of a branch
+		\begin{itemize}
+			\item There should be a button somewhere in the pull request tab on GitHub
+		\end{itemize}
+	\item There is no way to revert the repository to a state of a particular commit on GitHub (possible on command line git)
+	\item One way to do this would be to manually change the current document to its previous state, using either \texttt{diff} with the current vs.\ previous commits, or downloading the file from the previous commit and re-uploading it
+\end{itemize}
+
+
+\chapter{Questions and Discussion\\($\sim$20min)}
+\label{cha:questions_and_discussion}
+
+\begin{itemize}
+	\item Summary
+		\begin{itemize}
+			\item Go back to powerpoint slides and finish off with how to integrate everything as a workflow
+		\end{itemize}
+	\item How does everything fit in? (see above)
+	\item Questions and feedbacks
 \end{itemize}
 
 
